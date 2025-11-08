@@ -7,9 +7,13 @@ setInterval(UpdateTime, 1000);
 
 // Make the DIV element draggable:
 dragElement(document.getElementById("welcome"));
+dragElement(document.getElementById("aboutMe"));
 var welcomeWindow = document.getElementById("welcome")
 var welcomeClose = document.getElementById("welcomeclose")
 var welcomeOpen = document.getElementById("welcomeopen")
+var aboutMeWindow = document.getElementById("aboutMe")
+var aboutMeClose = document.getElementById("aboutMeclose")
+var aboutMeOpen = document.getElementById("aboutMeopen")
 var selectedIcon = undefined
 
 
@@ -42,6 +46,12 @@ welcomeClose.addEventListener("click", function() {
 })
 welcomeOpen.addEventListener("click", function() {
     OpenWindow(welcomeWindow)
+})
+aboutMeClose.addEventListener("click", function() {
+    CloseWindow(aboutMeWindow)
+})
+aboutMeOpen.addEventListener("click", function() {
+    OpenWindow(aboutMeWindow)
 })
 // Step 1: Define a function called `dragElement` that makes an HTML element draggable.
 function dragElement(element) {
