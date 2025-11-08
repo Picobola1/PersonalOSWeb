@@ -1,0 +1,58 @@
+#welcome {
+    border: solid; 
+    display: flex; 
+    flex-direction: column; 
+    border-radius: 16px; 
+    position: absolute; 
+    top: calc(50% - 90px); 
+    left: calc(50% - 180px);
+    overflow: hidden;
+}
+#welcomeheader {
+    width: 100%;
+    display: flex; 
+    align-items: center; 
+    cursor: move; 
+    justify-content: space-between; 
+    top: 0; 
+    height: 25px; 
+    backdrop-filter: blur(1px);
+    background-color: rgba(43, 43, 43, 0.717)
+}
+#welcomeopen {
+    cursor: pointer; 
+    background-color: rgb(92, 217, 85); 
+    border-radius: 100px; 
+    width: 15px; 
+    height: 15px; 
+    border: solid; 
+    border-color: rgb(101, 173, 98); 
+    border-width: 3px; 
+    margin-left: 6px;
+}
+#welcomeclose {
+    cursor: pointer; 
+    background-color: rgb(217, 85, 85); 
+    border-radius: 100px; 
+    width: 15px; 
+    height: 15px; 
+    border: solid; 
+    border-color: rgb(175, 67, 67); 
+    border-width: 3px; 
+    margin-right: 6px;
+}
+
+.text {
+    
+    font-weight: bold;
+    color: white; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#welcomeText {
+    margin: 0 8px; 
+}
+#welcomeBox {
+    padding: 15px;
+    backdrop-filter: blur(10px); 
+    background-color: rgba(255, 255, 255, 0.717);
+}

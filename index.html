@@ -4,27 +4,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EllieOs</title>
     <link rel="icon"  href="cropped_circle_image.png">
+    <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <html>
     <body style="background-image: url(Atlas_forrest.jpg); background-size: cover;">
-        <div id="welcome"style="  border: solid; display: flex; flex-direction: column; border-radius: 16px; position: absolute; top: calc(50% - 90px); left: calc(50% - 180px);overflow: hidden;">
-            <div id="welcomeheader" style="width: 100%; display: flex; align-items: center; cursor: move; justify-content: space-between; top: 0; height: 25px; backdrop-filter: blur(1px); background-color: rgba(43, 43, 43, 0.717)">
-                <div id="welcomeopen" style="cursor: pointer; background-color: rgb(92, 217, 85); border-radius: 100px; width: 15px; height: 15px; border: solid; border-color: rgb(101, 173, 98); border-width: 3px; margin-left: 6px;"></div>
-                <p style="margin: 0 8px; font-weight: bold;color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Welcome</p>
-                <div id="welcomeclose" style="cursor: pointer; background-color: rgb(217, 85, 85); border-radius: 100px; width: 15px; height: 15px; border: solid; border-color: rgb(175, 67, 67); border-width: 3px; margin-right: 6px;"></div>
+        <div id="welcome">
+            <div id="welcomeheader">
+                <div id="welcomeopen"></div>
+                <p class="text" id="welcomeText">Welcome</p>
+                <div id="welcomeclose"></div>
             </div>
-            <div style=" padding: 15px;backdrop-filter: blur(10px); background-color: rgba(255, 255, 255, 0.717);">
+            <div  id="welcomeBox">
                 <img src="cropped_circle_image.png" style="width: 70px;">
                 <h1>EllieOS</h1>
-                <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"><b>EllieOS</b> is the best OS to ever exist, it answers the question of <br>who is <b>ELLIE</b> and what <b>RANDOM</b> <u>things</u> has she made</p>
+                <p class="text" style="color: black;"><b>EllieOS</b> is the best OS to ever exist, it answers the question of <br>who is <b>ELLIE</b> and what <b>RANDOM</b> <u>things</u> has she made</p>
             </div>
             
         </div>
-        <div  style="position: absolute; width: 100%; display: flex; backdrop-filter: blur(10px); background-color: rgba(0, 0, 0, 0.125); bottom: 0%; left: 0%; justify-content: space-between;">
-            <p style="color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;padding: 4px 12px; font-weight: bold;">
+        <div id="taskbar" style="position: absolute; width: 100%; display: flex; backdrop-filter: blur(10px); background-color: rgba(0, 0, 0, 0.125); bottom: 0%; left: 0%; justify-content: space-between;">
+            <p class="text" style="padding: 4px 12px;">
                 EllieOS
             </p>
-            <p id="Time" style=" padding: 4px 12px;  color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: bold;">
+            <p class="text" id="Time" style=" padding: 4px 12px; font-weight: bold;">
             11/6/2025 4:07 PM
             </p>
         </div>
