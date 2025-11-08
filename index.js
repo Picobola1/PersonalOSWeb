@@ -10,6 +10,7 @@ dragElement(document.getElementById("welcome"));
 var welcomeWindow = document.getElementById("welcome")
 var welcomeClose = document.getElementById("welcomeclose")
 var welcomeOpen = document.getElementById("welcomeopen")
+var selectedIcon = undefined
 
 
 
@@ -19,6 +20,23 @@ function CloseWindow(element) {
 function OpenWindow(element) {
     element.style.display = "flex"
 }
+function selectIcon(element){
+    element.classList.add("selected")
+    selectIcon = element
+}
+function delSelectIcon(element){
+    element.classList.remove("selected")
+    selectIcon = undefined
+}
+function handleIconTap(element) {
+  if (element.classList.contains("selected")) {
+    delSelectIcon(element)
+    OpenWindow(window)
+  } else {
+    selectIcon(element)
+  }
+}
+
 welcomeClose.addEventListener("click", function() {
     CloseWindow(welcomeWindow)
 })
