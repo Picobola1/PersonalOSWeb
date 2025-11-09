@@ -6,10 +6,8 @@ function UpdateTime() {
 setInterval(UpdateTime, 1000);
 
 // Make the DIV element draggable:
-dragElement(document.getElementById("welcome"));
-dragElement(document.getElementById("aboutMe"));
-addWindowTapHandling(welcomeWindow);
-addWindowTapHandling(aboutMeWindow);
+
+
 var welcomeWindow = document.getElementById("welcome")
 var welcomeClose = document.getElementById("welcomeclose")
 var welcomeOpen = document.getElementById("welcomeopen")
@@ -19,6 +17,10 @@ var aboutMeOpen = document.getElementById("aboutMeopen")
 var selectedIcon = undefined
 var biggestIndex = 10
 
+dragElement(document.getElementById("welcome"));
+dragElement(document.getElementById("aboutMe"));
+addWindowTapHandling(welcomeWindow);
+addWindowTapHandling(aboutMeWindow);
 
 
 function CloseWindow(element) {
@@ -42,7 +44,7 @@ function handleIconTap(element) {
     delSelectIcon(element)
     OpenWindow(element)
   } else {
-    selectIcon(window)
+    selectIcon(aboutMeWindow)
   }
 }
 function addWindowTapHandling(element) {
