@@ -8,6 +8,8 @@ setInterval(UpdateTime, 1000);
 // Make the DIV element draggable:
 dragElement(document.getElementById("welcome"));
 dragElement(document.getElementById("aboutMe"));
+addWindowTapHandling(welcomeWindow);
+addWindowTapHandling(aboutMeWindow);
 var welcomeWindow = document.getElementById("welcome")
 var welcomeClose = document.getElementById("welcomeclose")
 var welcomeOpen = document.getElementById("welcomeopen")
@@ -15,6 +17,7 @@ var aboutMeWindow = document.getElementById("aboutMe")
 var aboutMeClose = document.getElementById("aboutMeclose")
 var aboutMeOpen = document.getElementById("aboutMeopen")
 var selectedIcon = undefined
+var biggestIndex = 10
 
 
 
@@ -23,22 +26,35 @@ function CloseWindow(element) {
 }
 function OpenWindow(element) {
     element.style.display = "flex"
+    biggestIndex++;  // Increment biggestIndex by 1
+    element.style.zIndex = biggestIndex;
 }
 function selectIcon(element){
     element.classList.add("selected")
-    selectIcon = element
+    selectedIcon = element
 }
 function delSelectIcon(element){
     element.classList.remove("selected")
-    selectIcon = undefined
+    selectedIcon = undefined
 }
 function handleIconTap(element) {
   if (element.classList.contains("selected")) {
     delSelectIcon(element)
-    OpenWindow(window)
+    OpenWindow(element)
   } else {
-    selectIcon(element)
+    selectIcon(window)
   }
+}
+function addWindowTapHandling(element) {
+    element.addEventListener("mousedown", () =>
+    handleWindowTap(element)
+    
+  )
+}
+function handleWindowTap(element){
+    biggestIndex++
+    element.style.zIndex = biggestIndex;
+    
 }
 
 welcomeClose.addEventListener("click", function() {
@@ -53,6 +69,7 @@ aboutMeClose.addEventListener("click", function() {
 aboutMeOpen.addEventListener("click", function() {
     OpenWindow(aboutMeWindow)
 })
+
 // Step 1: Define a function called `dragElement` that makes an HTML element draggable.
 function dragElement(element) {
   // Step 2: Set up variables to keep track of the element's position.
