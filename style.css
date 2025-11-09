@@ -64,7 +64,7 @@
 #aboutMe {
     z-index: 0;
     border: solid; 
-    display: flex; 
+    display: none; 
     flex-direction: column; 
     border-radius: 16px; 
     position: absolute; 
@@ -85,6 +85,7 @@
     background-color: rgba(43, 43, 43, 0.717)
 } 
 #aboutMeBox {
+    
     padding: 15px;
     backdrop-filter: blur(10px); 
     background-color: rgba(255, 255, 255, 0.717);

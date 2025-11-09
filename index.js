@@ -14,6 +14,7 @@ var welcomeOpen = document.getElementById("welcomeopen")
 var aboutMeWindow = document.getElementById("aboutMe")
 var aboutMeClose = document.getElementById("aboutMeclose")
 var aboutMeOpen = document.getElementById("aboutMeopen")
+var aboutMeIcon = document.getElementById("aboutMeIcon")
 var selectedIcon = undefined
 var biggestIndex = 10
 
@@ -71,6 +72,10 @@ aboutMeClose.addEventListener("click", function() {
 aboutMeOpen.addEventListener("click", function() {
     OpenWindow(aboutMeWindow)
 })
+aboutMeIcon.addEventListener("click", function() {
+    OpenWindow(aboutMeWindow)
+})
+
 
 // Step 1: Define a function called `dragElement` that makes an HTML element draggable.
 function dragElement(element) {
