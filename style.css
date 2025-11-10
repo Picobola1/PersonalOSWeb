@@ -112,10 +112,10 @@
     border-width: 3px; 
     margin-right: 6px;
 }
-#OpenCv {
+#OpenCvWindow {
     z-index: 0;
     border: solid; 
-    display: flex; 
+    display: none; 
     flex-direction: column; 
     border-radius: 16px; 
     position: absolute; 

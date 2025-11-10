@@ -15,6 +15,10 @@ var aboutMeWindow = document.getElementById("aboutMe")
 var aboutMeClose = document.getElementById("aboutMeclose")
 var aboutMeOpen = document.getElementById("aboutMeopen")
 var aboutMeIcon = document.getElementById("aboutMeIcon")
+var OpenCv = document.getElementById("OpenCvWindow")
+var OpenCvClose = document.getElementById("OpenCvclose")
+var OpenCvOpen = document.getElementById("OpenCvopen")
+var OpenCvIcon = document.getElementById("OpenCvIcon")
 var selectedIcon = undefined
 var biggestIndex = 10
 
@@ -22,6 +26,8 @@ dragElement(document.getElementById("welcome"));
 dragElement(document.getElementById("aboutMe"));
 addWindowTapHandling(welcomeWindow);
 addWindowTapHandling(aboutMeWindow);
+addWindowTapHandling(OpenCv);
+//InstalizeWindow("OpenCv")
 
 
 function CloseWindow(element) {
@@ -45,7 +51,7 @@ function handleIconTap(element) {
     delSelectIcon(element)
     OpenWindow(element)
   } else {
-    selectIcon(aboutMeWindow)
+    selectIcon(element + "Window")
   }
 }
 function addWindowTapHandling(element) {
@@ -59,6 +65,13 @@ function handleWindowTap(element){
     element.style.zIndex = biggestIndex;
     
 }
+function InstalizeWindow(elementName) {
+    var screen = document.getElementById(elementName)
+    addWindowTapHandling(screen)
+    CloseWindow(elementName)
+    dragElement(screen)
+}
+
 
 welcomeClose.addEventListener("click", function() {
     CloseWindow(welcomeWindow)
@@ -74,6 +87,12 @@ aboutMeOpen.addEventListener("click", function() {
 })
 aboutMeIcon.addEventListener("click", function() {
     OpenWindow(aboutMeWindow)
+})
+OpenCvClose.addEventListener("click", function() {
+    CloseWindow(OpenCvWindow)
+})
+OpenCvIcon.addEventListener("click", function() {
+    OpenWindow(OpenCvWindow)
 })
 
 
